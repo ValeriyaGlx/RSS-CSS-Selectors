@@ -1,0 +1,80 @@
+.CodeMirror {
+  display: none;
+}
+
+.html-viewer {
+  width: 50%;
+  background-color: rgba(60, 59, 59, 0.925);
+}
+
+.html-viewer-inner {
+  font-family: 'Space Mono', monospace;
+  background-color: rgb(255, 97, 64);
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 3px;
+}
+
+.html-viewer-section {
+  font-family: monospace, sans-serif;
+  line-height: 145%;
+  display: flex;
+  cursor: default;
+}
+
+.html-section-numbers {
+  background-color: rgb(129, 137, 140);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.forest-html {
+  padding: 8px;
+  font-weight: 500;
+  letter-spacing: 20;
+  color: rgb(240, 248, 255);
+}
+
+.forest-html div {
+  padding-left: 15px;
+}
+
+.html-container {
+  margin-left: 15px;
+}
+
+.html-tag {
+  color: rgb(0, 185, 69);
+}
+
+.html-class {
+  color: rgb(255, 44, 0);
+}
+
+.html-class-name {
+  color: rgb(6, 158, 213);
+}
+
+.html-id {
+  color: rgb(255, 133, 0);
+}
+
+.html-attr {
+  color: rgb(212, 0, 255);
+}
+
+.hovered {
+  filter: contrast(110%) brightness(130%);
+  transform: scale(1.02);
+}
+
+.forest .hovered {
+  border: 3px solid rgb(255, 133, 0);
+}
+
+@media screen and (max-width: 885px) {
+  .html-viewer {
+    width: 100%;
+  }
+}

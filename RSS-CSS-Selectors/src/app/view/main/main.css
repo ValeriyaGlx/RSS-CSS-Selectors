@@ -1,0 +1,363 @@
+.main {
+  min-height: calc(100vh - 60px);
+}
+
+.main-header {
+  font-size: 2.6vw;
+  margin: 0;
+  text-align: center;
+  color: rgb(217, 141, 25);
+}
+
+.main-layout {
+  width: 60%;
+  margin: 0 auto;
+  height: 14vw;
+  background-image: url('../../../assets/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.code {
+  width: 60%;
+  margin: 0px auto 10px;
+  padding: 8px;
+  background-color: rgb(2, 76, 104);
+  border: 2px solid rgb(29, 87, 110);
+  box-shadow: 2px 5px 10px rgb(5, 5, 5);
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  position: relative;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.2);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.background-active {
+  visibility: visible;
+}
+
+.background-active-finish {
+  visibility: visible;
+  z-index: 20;
+}
+
+.result-block {
+  position: relative;
+  width: 100%;
+  height: 85%;
+}
+
+.forest {
+  position: absolute;
+  bottom: -0.9vw;
+  right: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.forest fox,
+.fox,
+.forest rabbit,
+.rabbit,
+.forest squirrel,
+.squirrel,
+.with-nut,
+.forest bird,
+.pink,
+.forest deer,
+.deer,
+.forest snail,
+.snail {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.forest fox,
+.fox,
+.forest deer,
+.deer {
+  width: 10vw;
+  height: 10vw;
+}
+
+.forest snail,
+.snail,
+.lay {
+  width: 4vw;
+  height: 4vw;
+}
+
+.forest squirrel,
+.squirrel,
+.with-nut,
+.forest rabbit,
+.rabbit {
+  width: 6vw;
+  height: 6vw;
+}
+
+.forest bird,
+.pink {
+  width: 6vw;
+  height: 6vw;
+}
+
+.forest fox::after,
+.fox::after,
+.forest squirrel::after,
+.squirrel::after,
+.forest rabbit::after,
+.rabbit::after,
+.with-nut::after,
+.forest bird::after,
+.pink::after,
+.forest deer::after,
+.deer::after,
+.forest snail::after,
+.snail::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.forest bird,
+.pink {
+  bottom: 60px;
+}
+
+.forest snail:first-child {
+  z-index: 3;
+}
+
+.forest snail.top,
+.top {
+  top: 1.7vw;
+}
+
+.forest fox::after,
+.fox::after {
+  bottom: -0.5vw;
+  background-image: url('../../../assets/fox.png');
+}
+
+.forest deer::after,
+.deer::after {
+  background-image: url('../../../assets/deer.png');
+}
+
+.forest squirrel::after,
+.squirrel::after {
+  background-image: url('../../../assets/squrel.png');
+}
+
+.forest snail::after,
+.snail::after {
+  background-image: url('../../../assets/snail-red.png');
+}
+
+squirrel.with-nut::after,
+.squirrel.with-nut::after {
+  background-image: url('../../../assets/squrel-with-nut.png');
+}
+
+.forest rabbit::after,
+.rabbit::after {
+  background-image: url('../../../assets/rabbit.png');
+}
+
+rabbit.lay::after {
+  background-image: url('../../../assets/rabbit-lay.png');
+}
+
+.forest stump rabbit.lay::after {
+  bottom: 1.5vw;
+}
+
+.forest bird::after {
+  background-image: url('../../../assets/bird.png');
+}
+
+bird.pink::after {
+  background-image: url('../../../assets/bird-pink.png');
+}
+
+.forest cave,
+.forest stump {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 11vw;
+  height: 11vw;
+  z-index: 0;
+}
+
+.forest stump {
+  flex-direction: column;
+  align-items: center;
+}
+
+.forest cave::after,
+.forest stump::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.forest cave::after {
+  bottom: 0.5vw;
+}
+
+.forest stump::after {
+  bottom: -4vw;
+  transform: rotateX(-55deg);
+}
+
+.forest cave::after {
+  background-image: url('../../../assets/mount.png');
+}
+
+.forest stump::after {
+  background-image: url('../../../assets/bush.png');
+}
+
+[name='Bunny']::before,
+[name='Nansy']::before {
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: -2vw;
+  padding: 0.2vw;
+  border-radius: 5px;
+  font-family: 'Grandstander', cursive;
+  font-size: 1.5vw;
+  color: rgb(217, 141, 25);
+  border: 1.5px solid rgb(0, 0, 0);
+}
+
+[name='Nansy']::before {
+  content: 'Nancy';
+}
+
+[name='Bunny']::before {
+  content: 'Bunny';
+}
+
+.dance {
+  animation: dance 0.6s infinite alternate-reverse;
+}
+
+@keyframes dance {
+  0% {
+    transform: skew(2deg, 1deg) scale(1, 1) translate(-4%, 0%);
+  }
+
+  50% {
+    transform: skew(0deg, 0deg) scale(1, 0.9) translate(0%, 6%);
+  }
+
+  100% {
+    transform: skew(-2deg, 1deg) scale(1, 1) translate(4%, 0%);
+  }
+}
+
+.selector-data {
+  font-family: monospace, sans-serif;
+  line-height: 145%;
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  height: max-content;
+  padding: 2px 10px;
+  z-index: 2;
+  background-color: rgba(239, 235, 235, 0.839);
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.finish {
+  font-size: 24px;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin: 0 auto;
+  background-color: rgba(239, 235, 235, 0.957);
+  box-shadow: 1px 2px 5px rgb(5, 5, 5);
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+.finish h4 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.finish p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.finish button {
+  display: block;
+  background-color: rgb(191, 122, 48);
+  box-shadow: 1px 2px 5px rgb(5, 5, 5);
+  padding: 5px 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 885px) {
+  .code {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .selector-data {
+    font-size: 12px;
+    line-height: 125%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .selector-data {
+    padding: 2px 5px;
+    font-size: 10px;
+    line-height: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+  height: max-content;
+  background-color: rgb(34, 96, 120);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Grandstander', cursive;
+  font-weight: 400;
+  text-shadow: -2px 0.5px rgb(0, 0, 0), 0.5px 2px rgb(0, 0, 0),
+    2px 0.5px rgb(0, 0, 0), 0.5px -2px rgb(0, 0, 0);
+  color: rgb(217, 141, 25);
+}

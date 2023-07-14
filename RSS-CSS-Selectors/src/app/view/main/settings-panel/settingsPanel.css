@@ -1,0 +1,219 @@
+.settings {
+  color: rgb(4, 4, 4);
+  padding: 5px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: rgb(34, 96, 120);
+  box-shadow: 2px 5px 10px rgb(5, 5, 5);
+  transform: translate(100%, 0px);
+  transition: all 0.3s ease 0s;
+  z-index: 4;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  padding: 0px 15px;
+}
+
+.settings-header_inner {
+  display: flex;
+  align-items: center;
+}
+
+.level-checker,
+.level-eye {
+  width: 30px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: sepia(1);
+}
+
+.level-checker {
+  background-image: url('../../../../assets/check-mark.svg');
+}
+
+.level-eye {
+  background-image: url('../../../../assets/eye.svg');
+}
+
+.settings-header_inner h2 {
+  margin-right: 5px;
+  color: rgb(217, 141, 25);
+}
+
+.level-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.level-navigation-prev,
+.level-navigation-next {
+  border: none;
+  background: none;
+  width: 30px;
+  height: 25px;
+  background-image: url('../../../../assets/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.level-navigation-prev {
+  transform: rotate(180deg);
+}
+
+.description-level {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 150%;
+}
+
+.settings-description {
+  height: max-content;
+  opacity: 1;
+  transition: all 0.3s;
+  padding: 0 15px;
+}
+
+.settings-description span {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  background-color: rgb(0, 120, 45);
+  box-shadow: 1px 2px 5px rgb(5, 5, 5);
+}
+
+.example {
+  width: max-content;
+  max-width: fit-content;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 120, 45);
+  padding: 2px 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-shadow: 1px 2px 5px rgb(5, 5, 5);
+}
+
+.settings-choose {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 15px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+}
+
+.choose {
+  display: block;
+  background-color: rgb(191, 122, 48);
+  box-shadow: 1px 2px 5px rgb(5, 5, 5);
+  padding: 5px 0;
+}
+
+.levels-list {
+  height: 0px;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.levels-list::-webkit-scrollbar {
+  width: 10px;
+  background-color: inherit;
+  border: 2px solid rgba(8, 8, 8, 0.765);
+  border-radius: 15px;
+  opacity: 0.5;
+}
+
+.levels-list::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(8, 8, 8, 0.765);
+  background-color: rgb(191, 122, 48);
+  border-radius: 15px;
+}
+
+.levels-list.active {
+  height: 450px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+  overflow-y: auto;
+}
+
+.level-button {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 7px 15px;
+}
+
+.level-button:hover,
+.level-button:active {
+  background-color: rgb(191, 122, 48);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.level-button_div {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.level-button_div span:first-child,
+.level-button_div span:last-child {
+  filter: sepia(1);
+}
+
+.level-button_div span:first-child,
+.level-button_div span:last-child {
+  display: block;
+  width: 50px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.level-button_div span:first-child {
+  background-image: url('../../../../assets/check-mark.svg');
+}
+
+.level-button_div span:last-child {
+  background-image: url('../../../../assets/eye.svg');
+}
+
+.settings-description.active {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.not-filter {
+  filter: sepia(0);
+}
+
+.choose-reset {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 120, 45);
+}
+
+.hidden {
+  display: none;
+}

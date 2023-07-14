@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "types": ["@types/codemirror", "jest"]
+  },
+  "include": [
+    "src/**/**/*",
+    "src/*",
+    "./jest-setup.ts"
+  ]
+}
